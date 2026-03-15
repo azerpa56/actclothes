@@ -3,19 +3,33 @@
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Producto } from "@/app/generated/prisma/client";
 import Toggle from "@/components/ui/Toggle";
 import Modal from "@/components/ui/Modal";
 import Button from "@/components/ui/Button";
 
+type ProductoSerializado = {
+  id: number;
+  nombre: string;
+  slug: string;
+  descripcion: string;
+  precio: number;
+  imagen: string;
+  imagenes: string[];
+  disponible: boolean;
+  categoria: string | null;
+  tallas: string[];
+  creadoEn: Date;
+  actualizadoEn: Date;
+};
+
 interface AdminProductTableProps {
-  initialProductos: Producto[];
+  initialProductos: ProductoSerializado[];
 }
 
 export default function AdminProductTable({
   initialProductos,
 }: AdminProductTableProps) {
-  const [productos, setProductos] = useState<Producto[]>(initialProductos);
+  const [productos, setProductos] = useState<ProductoSerializado[]>(initialProductos);
   const [search, setSearch] = useState("");
   const [filterDisponible, setFilterDisponible] = useState<string>("");
   const [deleteId, setDeleteId] = useState<number | null>(null);
@@ -134,7 +148,7 @@ export default function AdminProductTable({
               </tr>
             ) : (
               filtered.map((producto) => {
-                const precio = Number(producto.precio.toString());
+                const precio = producto.precio;
                 return (
                   <tr key={producto.id} className="hover:bg-neutral-50">
                     {/* Imagen */}
