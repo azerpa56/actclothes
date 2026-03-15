@@ -75,7 +75,7 @@ export default async function ProductoPage({ params }: Props) {
           </h1>
 
           <p className="text-2xl font-semibold text-black mb-6">
-            ${precioNum.toLocaleString("es-AR")}
+            ${precioNum.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
 
           <p className="text-neutral-600 text-sm leading-relaxed mb-8">

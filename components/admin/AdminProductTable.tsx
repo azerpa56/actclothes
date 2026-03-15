@@ -181,7 +181,7 @@ export default function AdminProductTable({
 
                     {/* Precio */}
                     <td className="px-5 py-3 font-medium text-neutral-900">
-                      ${precio.toLocaleString("es-AR")}
+                      ${precio.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </td>
 
                     {/* Toggle */}

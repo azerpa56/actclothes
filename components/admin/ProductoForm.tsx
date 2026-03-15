@@ -162,7 +162,7 @@ export default function ProductoForm({ producto }: ProductoFormProps) {
       {/* Precio */}
       <Input
         id="precio"
-        label="Precio (ARS) *"
+        label="Precio (USD) *"
         type="number"
         step="0.01"
         min="0"

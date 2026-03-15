@@ -57,7 +57,7 @@ export default function ProductCard({
             {nombre}
           </h3>
           <span className="text-sm text-neutral-900 font-semibold whitespace-nowrap">
-            ${precioNum.toLocaleString("es-AR")}
+            ${precioNum.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </span>
         </div>
       </article>
