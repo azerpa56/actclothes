@@ -15,7 +15,15 @@ export default function PublicLayout({
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             {/* Copyright */}
             <p className="text-sm text-neutral-500 order-2 sm:order-1">
-              © {new Date().getFullYear()} ACT Clothes. Todos los derechos reservados.
+              © 2026 Gorazer. Todos los derechos reservados.{" "}
+              <a
+                href="https://gorazer.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-neutral-800 underline underline-offset-2 transition-colors"
+              >
+                gorazer.vercel.app
+              </a>
             </p>
 
             {/* Redes sociales */}
