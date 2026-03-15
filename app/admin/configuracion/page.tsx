@@ -1,6 +1,8 @@
 import { prisma } from "@/lib/prisma";
 import ConfiguracionForm from "@/components/admin/ConfiguracionForm";
 
+export const dynamic = "force-dynamic";
+
 export default async function ConfiguracionPage() {
   const config = await prisma.configSitio.findUnique({ where: { id: 1 } });
 

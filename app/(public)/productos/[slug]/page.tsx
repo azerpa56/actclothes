@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+
+export const dynamic = "force-dynamic";
 import ProductGallery from "@/components/public/ProductGallery";
 import WhatsAppBuyButton from "@/components/public/WhatsAppBuyButton";
 
