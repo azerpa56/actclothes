@@ -13,7 +13,7 @@ export const productoSchema = z.object({
     .positive("El precio debe ser mayor a 0")
     .multipleOf(0.01, "El precio puede tener hasta 2 decimales"),
   imagen: z.string().min(1, "La imagen es requerida"),
-  imagenes: z.array(z.string()).max(3, "Máximo 3 fotos adicionales").optional().default([]),
+  imagenes: z.array(z.string()).max(3, "Máximo 3 fotos adicionales").default([]),
   disponible: z.boolean(),
   categoria: z.string().optional(),
   tallas: z
